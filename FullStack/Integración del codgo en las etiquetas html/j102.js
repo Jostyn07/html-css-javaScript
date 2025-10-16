@@ -1,0 +1,1 @@
+alert("Muestra un mensaje")
