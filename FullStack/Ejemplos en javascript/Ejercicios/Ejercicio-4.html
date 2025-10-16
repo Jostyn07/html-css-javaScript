@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function cambio() {
+            nombreImagen= document.getElementById('nombreImagen').value;
+            document.getElementById("imagen").src=nombreImagen
+        }
+    </script>
+    <img id="imagen" src="">
+    <select name="imagenes" id="nombreImagen" onclick="cambio()">
+        <option value="./Imagen/Imagen 1.jpeg">Imagen 1</option>
+        <option value="./Imagen/Imagen 2.jpeg">Imagen 2</option>
+    </select>
+</body>
+</html>
