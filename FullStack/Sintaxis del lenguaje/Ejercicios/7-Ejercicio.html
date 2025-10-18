@@ -6,12 +6,11 @@
     <title>Document</title>
 </head>
 <body>
-    <script>
-        nota1 = parseFloat(prompt("Ingresar la primera nota"))
-        console.log(typeof(nota1))
-        for(nota1 = nota1; nota1 == Number; parseFloat(prompt("Ingresar la primera nota"))) {
-            console.log("La nota es: ", nota1)
-        }
-    </script>
+<input type="number" placeholder="Ingresar nota 1" id="nota1">
+<button id="btn-nota1" onclick="console.log(nota1)">Subir Nota 1</button>
+<script>
+    nota1 = document.getElementById(nota1)
+    console.log(nota1)
+</script>
 </body>
 </html>
