@@ -1,1 +1,0 @@
-alert("Muestra un mensaje")
