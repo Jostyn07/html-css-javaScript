@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        numero_1 = prompt("Ingresar valor numero 1");
+        operación = prompt("Introduccior operación dividir (/) multiplicar (*) sumar (+) restar (-)");
+        numero_2 = prompt("Ingresar valor numero 2");
+        numero_1 = parseInt(numero_1);
+        numero_2 = parseInt(numero_2);
+        operación = OPERATO(operación)
+        if (!isNaN(numero_1) && !isNaN(numero_2)) {
+            alert(`Resultado: ${numero_1}${operación}${numero_2}`)
+        }
+        alert(numero_1/numero_2);
+        alert(`15${operación}15`);
+    </script>
+</body>
+</html>
