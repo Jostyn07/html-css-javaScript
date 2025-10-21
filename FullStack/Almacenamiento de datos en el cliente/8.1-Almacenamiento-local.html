@@ -1,0 +1,45 @@
+<!-- // .setItem(Key, value): Almacena un par clave-Valor en localStorage
+// .getItem(Key): Recupera el valor asociado a una clave en localStorage
+// .removeItem(key): Elimina un par clave-valor de localStorage
+// .clear(): Borra todos los datos almacenados en localStorage -->
+
+<!-- // Almacenar un valor en localStorage -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        localStorage.setItem('nombre', 'Carlos Gómez')
+        localStorage.setItem('edad', 22);
+
+        var nombre = localStorage.getItem('nombre');
+        var edad = localStorage.getItem('edad');
+
+        console.log(nombre)
+        console.log(edad)
+
+        // Eliminar un valor en localStorage
+        localStorage.removeItem('nombre');
+        var nombre = localStorage.getItem('nombre');
+        console.log(nombre);
+
+        //Borrar todos los datos almacenado en el localStorage
+        localStorage.clear();
+
+        // sessionstorage
+        // almacenar un valor en sessionStorage
+        sessionStorage.setItem('nombre', 'Laura');
+        var nombre = sessionStorage.getItem('nombre');
+        console.log(nombre);
+
+        sessionStorage.removeItem('nombre');
+
+        sessionStorage.clear();
+    </script>
+</body>
+</html>
