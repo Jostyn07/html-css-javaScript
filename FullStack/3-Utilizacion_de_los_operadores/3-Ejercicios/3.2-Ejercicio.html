@@ -1,0 +1,124 @@
+<!-- Crear un cronometro con hora, minutos, segundos y milisegundos -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronometro</title>
+ </head>
+ <body>
+    <div id="Hora"></div>
+        
+    <div id="Cronometro"></div>
+    <button id="arrancar">Arrancar</button>
+    <button id="parar">Parar</button>
+    <button id="continuar">Continuar</button>
+    <button id="reiniciar">reiniciar</button>
+    <script>
+        function cronometro() {
+                var elcronometro;
+                
+            }
+
+        function crono() {
+            var elCrono;
+            var miFecha = new Date();
+            
+            día = miFecha.getDay();
+            dia = miFecha.getDate();
+            mes = miFecha.getMonth();
+            ano = miFecha.getFullYear();
+            hora = miFecha.getHours();
+            min = miFecha.getMinutes();
+            seg = miFecha.getSeconds();
+            mil = miFecha.getMilliseconds();
+
+            switch (día) {
+                case 0:
+                    día = "Domingo"
+                    break;
+                case 1:
+                    día = "Lunes"
+                    break;
+                case 2:
+                    día = "Martes"
+                    break;
+                case 3:
+                    día = "Miercoles"
+                    break;
+                case 4:
+                    día = "Jueves"
+                    break;
+                case 5:
+                    día = "Viernes"
+                    break;
+                case 6:
+                    día = "Sabado"
+                    break;
+            }
+
+            switch (mes) {
+                case 0:
+                    mes = "Enero"
+                    break;
+                case 1:
+                    mes = "Febrero"
+                    break
+                case 2:
+                    mes = "Marzo"
+                    break;
+                case 3:
+                    mes = "Abril"
+                    break;
+                case 4:
+                    mes = "Mayo"
+                    break;
+                case 5:
+                    mes = "Junio"
+                    break;
+                case 6:
+                    mes = "Julio"
+                    break;
+                case 7:
+                    mes = "Agosto"
+                    break;
+                case 8:
+                    mes = "Septiembre"
+                    break;
+                case 9:
+                    mes = "Octubre"
+                    break;
+                case 10:
+                    mes = "Noviembre"
+                    break;
+                case 11:
+                    mes = "Diciembre"
+                    break;
+            }
+            if (hora > 12) {
+                hora -= 12;
+                momento = "pm";
+            } else {
+                momento = "am";
+            }
+            if (hora < 10) {
+                hora = "0" + hora;
+            }
+            if (min < 10) {
+                min = "0" + min;
+            }
+            if (seg < 10) {
+                seg = "0" + seg;
+            }
+            if (mil < 10) {
+                mil ="0" + mil;
+            }
+
+            document.getElementById("Hora").innerHTML= `${día} ${dia}/${mes}/${ano} ${hora}:${min}:${seg} ${momento}`
+        }
+        window.onload = function() {
+            elCrono = setInterval(crono, 1000)
+        }
+    </script>
+ </body>
+ </html>
